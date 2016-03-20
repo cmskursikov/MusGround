@@ -26,5 +26,6 @@
   "publishExclude": [
     "**.user",
     "**.vspscc"
-  ]
+  ],
+  "userSecretsId": "aspnet5-MusGround.Web-20160320021408"
 }
