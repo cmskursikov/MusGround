@@ -6,7 +6,7 @@ import {LessonInfo, LessonInfoService} from '../../../app/services/lesson/data.s
 @Component({
 	providers: [LessonInfoService],
 	templateUrl: '/app/templates/lesson/lesson-edit.html',
-	styleUrls: ['app/content/styles/lesson/lesson-edit.css']
+	styleUrls: ['app/content/less/lesson/lesson-edit.css']
 })
 export class LessonEditComponent implements OnInit {
 	lesson: LessonInfo;

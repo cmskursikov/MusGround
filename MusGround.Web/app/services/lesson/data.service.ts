@@ -31,8 +31,8 @@ export class LessonInfoService {
 		return this.http.get(this._lessonUrl + id)
 			.map(res => <LessonInfo> res.json())
 			.catch(this.handleError);
-	}
-	updateLesson (lesson: LessonInfo) : Observable<void> {
+    }
+    updateLesson(lesson: LessonInfo): Observable<Response> {
 		let body = JSON.stringify(lesson);
 		let headers = new Headers({ 'Content-Type': 'application/json' });
 		let options = new RequestOptions({ headers: headers });

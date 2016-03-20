@@ -7,7 +7,7 @@ import {ArticleInfo} from '../../../app/services/article/article.service';
 @Component({
 	selector: 'side-menu',
 	templateUrl: 'app/templates/_shared/side-menu.html',
-	styleUrls: ['app/content/styles/_shared/side-menu.css'] 
+	styleUrls: ['app/content/less/_shared/side-menu.css'] 
 })
 export class SideMenuComponent implements OnInit, OnDestroy {
 	curObject: any;

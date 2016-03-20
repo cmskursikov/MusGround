@@ -5,6 +5,6 @@ import {ROUTER_DIRECTIVES, RouterOutlet} from 'angular2/router';
 	selector: 'header',
 	directives: [ROUTER_DIRECTIVES, RouterOutlet],
 	templateUrl: '/app/templates/_shared/header.html',
-	styleUrls: ['app/content/styles/_shared/header.css']
+	styleUrls: ['app/content/less/_shared/header.css']
 })
 export class HeaderComponent { }

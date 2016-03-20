@@ -1,44 +1,32 @@
 <html>
-  <head>
-    <base href="/">
-    <title>Musground</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <head>
+        <base href="/">
+        <title>Musground</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <script src="libs/js/es5-shim.min.js"></script>
+        <script src="libs/js/system-polyfills.js"></script>
+        <script src="libs/js/angular2-polyfills.js"></script>
+        <script src="libs/js/system.src.js"></script>
+        <script src="libs/js/Rx.js"></script>
+        <script src="libs/js/angular2.dev.js"></script>
+        <script src="libs/js/router.dev.js"></script>
+        <script src="libs/js/http.dev.js"></script>
+        <link rel="stylesheet" href="libs/css/bootstrap.css">
+        <script>
+            System.config({
+                packages: {        
+                    app: {
+                        format: 'register',
+                        defaultExtension: 'js'
+                    }
+                }
+            });
+            System.import('/app/main')
+                .then(null, console.error.bind(console));
+        </script>
+    </head>
 
-    <!-- 1. Load libraries -->
-    <!-- IE required polyfills, in this exact order -->
-    <script src="libs/es5-shim.min.js"></script>
-    <script src="libs/system-polyfills.js"></script>
-
-    <script src="libs/angular2-polyfills.js"></script>
-    <script src="libs/system.src.js"></script>
-    <script src="libs/Rx.js"></script>
-    <script src="libs/angular2.dev.js"></script>
-    <script src="libs/router.dev.js"></script>
-    <script src="libs/http.dev.js"></script>
-
-    <link rel="stylesheet" href="libs/css/bootstrap.css">
-
-    <!-- 2. Configure SystemJS -->
-    <script>
-      System.config({
-        packages: {        
-          app: {
-            format: 'register',
-            defaultExtension: 'js'
-          }
-        }
-      });
-      System.import('/app/main')
-            .then(null, console.error.bind(console));
-    </script>
-
-    <base href="/">
-
-  </head>
-
-  <!-- 3. Display the application -->
-  <body>
-    <musground-app>Loading...</musground-app>
-  </body>
-
+    <body>
+        <musground-app>Loading...</musground-app>
+    </body>
 </html>
