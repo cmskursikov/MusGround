@@ -1,0 +1,5 @@
+<div>
+	<div *ngFor="#article of articles">
+		<a [routerLink]="['ArticleDetail', {id: article.id}]" (click)="setActiveArticle(article)">{{article.name}}</a>
+	</div>
+</div>

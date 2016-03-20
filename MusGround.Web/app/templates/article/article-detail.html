@@ -1,0 +1,7 @@
+<div *ngIf="article.isModerated">
+	<h3>{{article.name}}</h3>
+	<div>{{article.text}}</div>
+</div>
+<div *ngIf="!article.isModerated">
+	Article was not moderated.
+</div>

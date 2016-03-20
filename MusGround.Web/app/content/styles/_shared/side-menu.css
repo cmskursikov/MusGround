@@ -1,0 +1,17 @@
+.side-menu {
+	background-color: rgb(230, 230, 230);
+	height: 100%;
+	width: 270px;
+	padding-top: 20px;
+}
+.side-menu_block {
+	margin: 20px 0;
+}
+.side-menu_block:first-of-type {
+	margin-top: 0;
+}
+.side-menu_row {
+	margin: 5px 0;
+	padding-left: 40px;
+	text-align: left;
+}

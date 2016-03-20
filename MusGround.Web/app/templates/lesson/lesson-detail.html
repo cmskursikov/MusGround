@@ -1,0 +1,9 @@
+<div *ngIf="lesson">
+	<div *ngIf="lesson.isModerated">
+		<h3>{{lesson.name}}</h3>
+		<div>{{lesson.text}}</div>
+	</div>
+	<div *ngIf="!lesson.isModerated">
+		Lesson was not moderated.
+	</div>
+</div>

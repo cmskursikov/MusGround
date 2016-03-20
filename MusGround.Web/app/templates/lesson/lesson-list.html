@@ -1,0 +1,6 @@
+<div>
+	<div *ngFor="#lesson of lessons">
+		<a [routerLink]="['LessonDetail', {id: lesson.id}]">{{lesson.name}}</a>
+		<a [routerLink]="['LessonEdit', {id: lesson.id}]">edit</a>
+	</div>
+</div>

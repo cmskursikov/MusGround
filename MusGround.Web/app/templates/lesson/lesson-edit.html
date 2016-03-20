@@ -1,0 +1,24 @@
+<div *ngIf="!lesson">
+	Lesson with id <b>{{id}}</b> was not found.
+</div>
+<div *ngIf="lesson">
+	<form (ngSubmit)="submitChanges()">
+		<h3>Edit lesson {{lesson.name}}</h3>
+		<div>Id: {{lesson.id}}</div>
+		<div>Name: <input type="text" required [(ngModel)]="lesson.name" ngControl="name" #name="ngForm" /></div>
+		<div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+			Name is required
+		</div>
+		<div>Description: <textarea required [(ngModel)]="lesson.description" ngControl="description" #description="ngForm"></textarea></div>
+		<div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+			Description is required
+		</div>
+		<div>Text: <textarea required [(ngModel)]="lesson.text" ngControl="text" #text="ngForm"></textarea></div>
+		<div [hidden]="text.valid || text.pristine" class="alert alert-danger">
+			Text is required
+		</div>
+		<div>Is moderated: <input type="checkbox" [(ngModel)]="lesson.isModerated" ngControl="isModerated" /></div>
+		<input type="submit" value="Submit form" />
+		<!-- <input type="button" value="Revert changes" (click)="revertChanges()" /> -->
+	</form>
+</div>

@@ -1,0 +1,20 @@
+<div class="side-menu">
+	<div class="side-menu_block">
+		<div class="side-menu_row">Перейти к уроку</div>
+		<div class="side-menu_row">Моя статистика</div>
+		<div class="side-menu_row">Планы занятий</div>
+	</div>
+	<div class="side-menu_block" *ngIf="getType(curObject) === 1">
+		<div class="side-menu_row" *ngIf="curObject.prevLessonId" (click)="gotoPrevLesson()">Предыдущий урок</div>
+		<div class="side-menu_row" *ngIf="curObject.nextLessonId" (click)="gotoNextLesson()">Следующий урок</div>
+		<div class="side-menu_row">Домашнее задание</div>
+		<div class="side-menu_row">Сокращенная версия</div>
+		<div class="side-menu_row" (click)="saveChanges()">Сохранить изменения</div>
+	</div>
+	<div class="side-menu_block" *ngIf="getType(curObject) === 2">
+		<div class="side-menu_row">Id статьи {{curObject.id}}</div>
+		<div class="side-menu_row">Автор статьи</div>
+		<div class="side-menu_row">38 лайков</div>
+		<div class="side-menu_row">Добавить в избранное</div>
+	</div>
+</div>
