@@ -11,7 +11,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "http://api.musground.ru/api/lesson",
       "environmentVariables": {
         "Hosting:Environment": "Development"
       }
