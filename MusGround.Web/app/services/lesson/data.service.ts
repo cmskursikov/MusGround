@@ -18,7 +18,7 @@ export class LessonInfo {
 
 @Injectable()
 export class LessonInfoService {
-	private _lessonUrl = 'api.musground/api/lesson/';
+	private _lessonUrl = 'http://api.musground.ru/api/lesson/';
 
 	constructor (private http: Http) { }
 
